@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Dayso Design Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: #FFF8F2;
+      overflow-x: hidden;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #E0F7FA, #FFE0EC);
+    }
+    h1 {
+      font-size: 3rem;
+      color: #FF69B4;
+      animation: bounce 2s infinite ease-in-out;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #5E2750;
+      margin-bottom: 30px;
+    }
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .about-pic {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border: 5px solid #FFB6C1;
+      margin-bottom: 20px;
+    }
+    table {
+      background: white;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px 20px;
+      border-bottom: 1px solid #FFDEE9;
+      text-align: left;
+    }
+    th {
+      background-color: #FF69B4;
+      color: white;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #FF69B4;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .back-btn:hover {
+      transform: scale(1.05);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>🎀 Meet the Maker! 💖</h1>
+    <h2>Hi, I'm Nur Dayana Sofea Binti Zainal from Kuala Terengganu!</h2>
+  </section>
+  <section class="about-content">
+    <img src="dayana.png" alt="About Me" class="about-pic">
+    <p style="font-size: 1.2rem; text-align:center; max-width: 600px;">I'm 20 years old and currently studying at <strong>Universiti Putra Malaysia (UPM)</strong>. I love designing cute things, especially custom stickers! Pastel colors are my favorite and I enjoy expressing creativity through art and design. 💕✨</p>
+    <table>
+      <tr><th>Details</th><th>Information</th></tr>
+      <tr><td>Name</td><td>Nur Dayana Sofea Binti Zainal</td></tr>
+      <tr><td>Age</td><td>20</td></tr>
+      <tr><td>Hobby</td><td>Creating Stickers and Designs</td></tr>
+      <tr><td>Favorite Color</td><td>Pastel Colours</td></tr>
+      <tr><td>University</td><td>Universiti Putra Malaysia (UPM)</td></tr>
+      <tr><td>Hometown</td><td>Kuala Terengganu</td></tr>
+    </table>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <a href="portfolio.html" class="back-btn">Next: My Stickers →</a>
+  </section>
+</body>
+</html>

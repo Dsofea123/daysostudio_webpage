@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dayso Design Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: #FFF8F2;
+      overflow-x: hidden;
+    }
+    .hero {
+      position: relative;
+      padding: 100px 20px;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FFE0EC, #E0F7FA);
+    }
+    .blobs div {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: float 8s ease-in-out infinite;
+    }
+    .blob1 { width: 200px; height: 200px; background: #FFDDE1; top: -50px; left: -50px; animation-delay: 0s; }
+    .blob2 { width: 300px; height: 300px; background: #FFECB3; bottom: -100px; right: -80px; animation-delay: 2s; }
+    .blob3 { width: 150px; height: 150px; background: #C8E6C9; top: 20%; right: -60px; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); }
+    }
+
+    .hero-content h1, .hero-content h2 {
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      color: #5E2750;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #FFB6C1;
+    }
+
+    .hero-content h2 {
+      font-size: 1.6rem;
+      color: #FF69B4;
+      margin-bottom: 25px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      color: #554;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .primary {
+      background: #FF69B4;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #FF69B4;
+      border: 2px solid #FF69B4;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+      background: #FFF0F5;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      background-color: #FFF0F5;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: sparkle 2s infinite ease-in-out;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.05); filter: brightness(1.2); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+      50% { box-shadow: 0 6px 12px rgba(255, 105, 180, 0.3); }
+    }
+
+    .animated-sticker {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .music-player {
+      margin-top: 20px;
+    }
+
+    .cute-btn {
+      background-color: #ffb6d9;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-family: 'Comic Neue', cursive;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s;
+    }
+
+    .cute-btn:hover {
+      background-color: #ff80c0;
+      transform: scale(1.05);
+    }
+
+    .cute-btn:active {
+      transform: scale(0.95);
+    }
+
+    .floating-loves {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .floating-loves span {
+      position: absolute;
+      bottom: -30px;
+      font-size: 24px;
+      animation: floatHearts 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .floating-loves span:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .floating-loves span:nth-child(2) { left: 30%; animation-delay: 1s; }
+    .floating-loves span:nth-child(3) { left: 50%; animation-delay: 2s; }
+    .floating-loves span:nth-child(4) { left: 70%; animation-delay: 3s; }
+    .floating-loves span:nth-child(5) { left: 90%; animation-delay: 4s; }
+
+    @keyframes floatHearts {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-300px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #FFDDE1;
+      color: #5E2750;
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="blobs">
+      <div class="blob1"></div>
+      <div class="blob2"></div>
+      <div class="blob3"></div>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Sticker Emoji" class="animated-sticker">
+    <div class="hero-content">
+      <h1>✨ Welcome to <span style="color:#FF69B4">Dayso Design Studio</span>! 💕</h1>
+      <h2>Hello everyone! 🎀 Seems that you already found my page! ✨ Thanks for visiting! 🐰💌</h2>
+      <p>We create the cutest custom stickers to brighten your world 💖</p>
+      <a href="portfolio.html" class="btn primary">See Our Stickers</a>
+      <a href="contact.html" class="btn secondary">Contact Us</a>
+      <div class="music-player">
+        <button id="playBtn" class="cute-btn">🎶 Play Music</button>
+        <audio id="bgMusic">
+          <source src="milkshake.mp3.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4143/4143470.png" alt="Custom">
+      <h3 style="color:#FF69B4;">Custom Stickers</h3>
+      <p>Personalized, themed, and uniquely adorable just for you!</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5269/5269238.png" alt="Printable">
+      <h3 style="color:#FF69B4;">Printable Packs</h3>
+      <p>Instant download packs for planners and DIY projects.</p>
+    </div>
+    <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/4359/4359886.png" alt="Merch">
+      <h3 style="color:#FF69B4;">Merch & Gifts</h3>
+      <p>Our cutest stickers on mugs, totes, and more!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dayso Design Studio. All Rights Reserved.</p>
+  </footer>
+
+  <div class="floating-loves">
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    const playBtn = document.getElementById("playBtn");
+
+    playBtn.addEventListener("click", () => {
+      if (music.paused) {
+        music.play();
+        playBtn.textContent = "⏸️ Pause Music";
+      } else {
+        music.pause();
+        playBtn.textContent = "🎶 Play Music";
+      }
+    });
+  </script>
+</body>
+</html>
